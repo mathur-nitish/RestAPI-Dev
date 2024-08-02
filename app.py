@@ -2,9 +2,9 @@ from flask import Flask,jsonify,request
 
 
 
-backend = Flask(__name__)
+app = Flask(__name__)
 
-@backend.route('/bfhl',methods=['GET','POST'])
+@app.route('/bfhl',methods=['GET','POST'])
 
 def sayHi():
     if request.method == 'GET':
@@ -30,4 +30,4 @@ def sayHi():
 
 
 if __name__ == '__main__':  
-   backend.run()
+   app.run()
